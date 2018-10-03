@@ -48,4 +48,12 @@ public class AIController : ActorController
 
         return result;
     }
+
+    private void Update()
+    {
+        if(Time.frameCount % 60 == 0)
+        {
+            btRootNode.Execute();
+        }
+    }
 }
