@@ -5,6 +5,14 @@ public class FollowTarget : Task
 {
     public override bool Execute()
     {
-        return base.Execute();
+        bool sucess = false;
+
+        if (ControlledAI.Agent.SetDestination(GetComponent<GetNearestTarget>().Do().transform.position))
+        {
+            ControlledAI.Agent.SetDestination(GetComponent<GetNearestTarget>().Do().transform.position);
+            sucess = true;
+        }
+
+        return sucess;
     }
 }
