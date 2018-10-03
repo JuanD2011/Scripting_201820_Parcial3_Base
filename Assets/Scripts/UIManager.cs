@@ -18,6 +18,6 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        //TODO: Set text from GameController
+        timerText.text = System.Math.Round(GameController.Instance.CurrentGameTime, 2).ToString();
     }
 }
